@@ -17,6 +17,6 @@ jobs:
     uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd.yml@main
     with:
       pom_path: 'pom.xml'
-      service: 'orders-service'
+      service: 'orders-service-example'
       target: ${{ github.ref_name }}
     secrets: inherit
