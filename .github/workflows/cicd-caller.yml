@@ -13,10 +13,11 @@ on:
 
 jobs:
   ReuseableJobForCICD:
-    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd.yml@main
-#    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd-generic.yml@main
+    #    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd-generic.yml@main
+    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd-generic.yml@main
     with:
       pom_path: 'pom.xml'
-      service: 'orders-service-example'
+      service: 'shipping-service-example'
       target: ${{ github.ref_name }}
+      SONAR_PROJECT:  ${{ vars.SONAR_PROJECT }}
     secrets: inherit
