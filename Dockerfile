@@ -15,5 +15,7 @@ RUN mvn -e -B package -DskipTests
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=builder app/target/orders-service-example-0.0.1-SNAPSHOT.jar /app/
+#COPY --from=builder app/target/orders-service-example-0.0.1-SNAPSHOT.jar /app/
+COPY --from=builder app/target/*.jar /app/
+#CMD java -jar *.jar $APP_ARGS
 CMD java -jar orders-service-example-0.0.1-SNAPSHOT.jar $APP_ARGS
