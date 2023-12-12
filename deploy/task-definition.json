@@ -1,0 +1,25 @@
+{
+  "family": "backend-services",
+  "taskRoleArn": "arn:aws:iam::848436986669:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::848436986669:role/LabRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+  
+  {
+      "name": "shipping-service-example",
+      "image": "848436986669.dkr.ecr.us-east-1.amazonaws.com/microservices-backend/shipping-service-example:dev",
+      "essential": true,
+      "memory": 512,
+      "cpu": 256,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080
+        }
+      ]
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "memory": "512",
+  "cpu": "256"
+}
