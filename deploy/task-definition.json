@@ -1,25 +1,29 @@
 {
-  "family": "backend-services",
-  "taskRoleArn": "arn:aws:iam::848436986669:role/LabRole",
-  "executionRoleArn": "arn:aws:iam::848436986669:role/LabRole",
-  "networkMode": "awsvpc",
-  "containerDefinitions": [
-  
-  {
-      "name": "shipping-service-example",
-      "image": "848436986669.dkr.ecr.us-east-1.amazonaws.com/microservices-backend/shipping-service-example:dev",
-      "essential": true,
-      "memory": 512,
-      "cpu": 256,
-      "portMappings": [
+    "family": "github_task_imagen_pagos_def",
+    "taskRoleArn": "arn:aws:iam::556390483751:role/LabRole",
+    "executionRoleArn": "arn:aws:iam::556390483751:role/LabRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
         {
-          "containerPort": 8080,
-          "hostPort": 8080
+            "name": "imagen_pagos",
+            "image": "556390483751.dkr.ecr.us-east-1.amazonaws.com/aws-ecr-nginx:imagen_pagos",
+            "cpu": "256",
+            "memory": "512",
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "name": "port_8080",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true
         }
-      ]
-    }
-  ],
-  "requiresCompatibilities": ["FARGATE"],
-  "memory": "512",
-  "cpu": "256"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
 }
