@@ -1,12 +1,12 @@
 {
-    "family": "github_task_imagen_pagos_def",
+    "family": "orders-service-def",
     "taskRoleArn": "arn:aws:iam::556390483751:role/LabRole",
     "executionRoleArn": "arn:aws:iam::556390483751:role/LabRole",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "imagen_pagos",
-            "image": "556390483751.dkr.ecr.us-east-1.amazonaws.com/aws-ecr-nginx:imagen_pagos",
+            "name": "orders-service",
+            "image": "556390483751.dkr.ecr.us-east-1.amazonaws.com/ecr-orders-service:orders-service-dev",
             "cpu": "256",
             "memory": "512",
             "portMappings": [
