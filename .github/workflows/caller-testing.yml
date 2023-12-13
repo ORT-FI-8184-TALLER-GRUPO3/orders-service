@@ -1,0 +1,7 @@
+name: caller-testing
+on:
+  workflow_dispatch:
+
+jobs:
+  ReuseableJobForCICD:
+    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/prueba.yml@main
