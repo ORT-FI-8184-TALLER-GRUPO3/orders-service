@@ -19,4 +19,4 @@ jobs:
       service: 'orders-service'
       target: ${{ github.ref_name }}
       SONAR_PROJECT:  ${{ vars.SONAR_PROJECT }}
-    secrets: inherit
+#    secrets: inherit
