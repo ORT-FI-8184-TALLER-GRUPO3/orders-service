@@ -3,10 +3,14 @@ name: Caller CI/CD Workflow
 on:
   push:
     branches:
-      - '*'
+      - dev
+      - test
+      - prod
   pull_request:
     branches:
-      - '*'
+      - dev
+      - test
+      - prod
 
 jobs:
   ReuseableJobForCICD:
