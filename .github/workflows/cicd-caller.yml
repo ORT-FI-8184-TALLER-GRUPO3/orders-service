@@ -12,7 +12,7 @@ jobs:
     uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd-generic.yml@main
     with:
       pom_path: 'pom.xml'
-      service: 'shipping-service-example'
+      service: 'products-service'
       target: ${{ github.ref_name }}
       SONAR_PROJECT:  ${{ vars.SONAR_PROJECT }}
     secrets: inherit
