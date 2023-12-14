@@ -1,0 +1,18 @@
+name: Caller CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  ReuseableJobForCICD:
+    uses: ORT-FI-8184-TALLER-GRUPO3/Devops/.github/workflows/cicd-generic.yml@main
+    with:
+      pom_path: 'pom.xml'
+      service: 'orders-service-example'
+      target: ${{ github.ref_name }}
+    secrets: inherit
