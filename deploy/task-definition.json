@@ -18,10 +18,7 @@
                     "appProtocol": "http"
                 }
             ],
-            "essential": true,
-	   "environment" : [
-    		{ "APP_ARGS" : "http://dev-alb-payments-700723600.us-east-1.elb.amazonaws.com:8080 http://dev-alb-shipping-1743245218.us-east-1.elb.amazonaws.com:8080 http://dev-alb-products-124859477.us-east-1.elb.amazonaws.com:8080" }
-    		]
+            "essential": true
         }
     ],
     "requiresCompatibilities": [
