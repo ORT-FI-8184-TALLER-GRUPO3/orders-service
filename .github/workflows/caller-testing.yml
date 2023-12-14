@@ -1,15 +1,6 @@
 name: Caller backendTesting
 on:
-  push:
-    branches:
-      - Dev
-      - Test
-      - Prod
-  pull_request:
-    branches:
-      - Dev
-      - Test
-      - Prod
+  workflow_dispatch:
 
 jobs:
   ReuseableJobForCICD:
