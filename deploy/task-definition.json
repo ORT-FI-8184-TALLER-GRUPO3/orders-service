@@ -20,7 +20,7 @@
             ],
             "essential": true,
 	    "environment" : [
-        	{ "name": "APP_ARGS", "value": "http://dev-alb-payments-700723600.us-east-1.elb.amazonaws.com:8080 http://dev-alb-shipping-1743245218.us-east-1.elb.amazonaws.com:8080 http://dev-alb-products-124859477.us-east-1.elb.amazonaws.com:8080" }
+        	{ "name": "APP_ARGS", "value": "http://prod-alb-payments-1153353668.us-east-1.elb.amazonaws.com:8080 http://prod-alb-shipping-208555764.us-east-1.elb.amazonaws.com:8080 http://prod-alb-products-2064462950.us-east-1.elb.amazonaws.com:8080" }
     		]
         }
     ],
