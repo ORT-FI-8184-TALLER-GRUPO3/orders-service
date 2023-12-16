@@ -18,7 +18,10 @@
                     "appProtocol": "http"
                 }
             ],
-            "essential": true
+            "essential": true,
+            "environment" : [
+                { "name": "APP_ARGS", "value": "http://test-alb-payments-58658729.us-east-1.elb.amazonaws.com:8080 http://test-alb-shipping-258962631.us-east-1.elb.amazonaws.com:8080 http://test-alb-products-1677939826.us-east-1.elb.amazonaws.com:8080" }
+                ]
         }
     ],
     "requiresCompatibilities": [
